@@ -203,8 +203,33 @@ public class Main{
 							}
 							break;
 						}
-					case 3:
-						
+						break;
+				case 3:
+									Payment p1 = new Payment();
+									System.out.println("Welcome to Payment Section");
+									p1.SetUser();
+									p1.greetingsUser();
+									System.out.println("1. Cash Payment");
+									System.out.println("2. Online Payment");
+									int userInput = input.nextInt();
+							switch (userInput){
+								case 1:
+									p1.checkCgpa();
+									break;
+								case 2:
+								OnlinePayment op = new OnlinePayment();
+								op.setOnlinePayAbleAmount();
+								break;
+							}
+						break;
+					case 4:
+							System.out.println("You have selected to exit the application");
+							System.out.println("Thank you for using Student Portal");
+							select = false;
+							break;
+						default:
+							System.out.println("Invalid Input");
+							break;
 			}
 		}
 	}
